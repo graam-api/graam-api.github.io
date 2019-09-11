@@ -11,7 +11,7 @@ title: Smartcontact Documentation
 
 [Click to call](/pages/enterprise-api/click2call-from-backoffice) 
 
-[Smartcontact PHP SDK](pages/Smartcontact-php-sdk)
+[Smartcontact PHP SDK](pages/enterprise-api/graam-php-sdk)
 
 [Enterprise CRM](pages/enterprise-crm/enterprise-crm)
 

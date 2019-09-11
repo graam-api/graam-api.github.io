@@ -7,7 +7,7 @@ title: Send and Receive SMS with Smartcontact
 You can use Smartcontact to send SMS to your client programmatically. All the SMS sent will be logged and can be seen from your Smartcontact account (see below).
 
 #### Send SMS with Smartcontact SDK: 
-Click here to see example of how to use Smartcontact PHP SDK to send SMS: [Smartcontact PHP SDK](/pages/Smartcontact-php-sdk)
+Click here to see example of how to use Smartcontact PHP SDK to send SMS: [Graam PHP SDK](/pages/enterprise-api/graam-php-sdk)
 
 ## Get the list of send and received SMS
 
