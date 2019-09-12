@@ -4,7 +4,7 @@ title: Group Management
 
 ## Create Group
 
-Smartcontact allows administrators to create group have many agents. This helps the administrator better management the use of Smartcontact. Creating a small group will make it easier to manage queues.
+Graam allows administrators to create group have many agents. This helps the administrator better management the use of Graam. Creating a small group will make it easier to manage queues.
 
 The group list is displayed as follows:
 ![Group](/images/group-list.png)

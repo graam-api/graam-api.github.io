@@ -1,8 +1,8 @@
 ---
-title: Smartcontact Documentation
+title: Graam Documentation
 ---
 
-## First steps with Smartcontact
+## First steps with Graam
 
 [Configure your call center](/pages/configuration/first-time-config)
 
@@ -11,7 +11,7 @@ title: Smartcontact Documentation
 
 [Click to call](/pages/enterprise-api/click2call-from-backoffice) 
 
-[Smartcontact PHP SDK](pages/enterprise-api/graam-php-sdk)
+[Graam PHP SDK](pages/enterprise-api/graam-php-sdk)
 
 [Enterprise CRM](pages/enterprise-crm/enterprise-crm)
 

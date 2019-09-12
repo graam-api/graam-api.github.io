@@ -1,5 +1,5 @@
 ---
-title: Smartcontact Enterprise API
+title: Graam Enterprise API
 ---
 
 ## Make call from back-office
@@ -13,6 +13,6 @@ title: Smartcontact Enterprise API
 
 ## SDK
 
-[Smartcontact PHP SDK](./Smartcontact-php-sdk)
+[Graam PHP SDK](./Graam-php-sdk)
 
-[Function available in SDK](./Smartcontact-enterprise-api)
+[Function available in SDK](./Graam-enterprise-api)

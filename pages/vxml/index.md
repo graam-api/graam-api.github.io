@@ -6,9 +6,9 @@ Title: Introduction to VoiceXML
 
 VoiceXML is the HTML of the voice web, the open standard markup language for voice applications. [Learn more about Vxml](http://www.voicexml.org/tutorials-2/introduction/)
 
-## How to use VoiceXML with Smartcontact
+## How to use VoiceXML with Graam
 
-Here is what you need to use VoiceXML with Smartcontact
+Here is what you need to use VoiceXML with Graam
 
 1. Setup a URL that return a Vxml document when called.
 2. Create a Remote IVR as described [here](/pages/call-routing-app/remote-ivr)

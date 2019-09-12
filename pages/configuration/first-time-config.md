@@ -1,8 +1,8 @@
 ---
-title: First steps in setting up your Smartcontact call center
+title: First steps in setting up your Graam call center
 ---
 
-## Welcome to Smartcontact
+## Welcome to Graam
 
 When you first login with your admin account, you are presented with this admin console.
 
@@ -26,7 +26,7 @@ You can make experiments by changing the destination of the call to see the diff
 
 ## Connect your SIP phone
 
-In order to make outbound call with Smartcontact, you must connect a SIP phone to your account. Smartcontact use the standard SIP protocol so you can use any SIP phone to connect to it. Here are some well known SIP (soft) phone that you can download and use on your PC to test.
+In order to make outbound call with Graam, you must connect a SIP phone to your account. Graam use the standard SIP protocol so you can use any SIP phone to connect to it. Here are some well known SIP (soft) phone that you can download and use on your PC to test.
 - [Zoiper](https://www.zoiper.com/)
 - [XLite from Counterpath](http://www.counterpath.com/x-lite/)
 

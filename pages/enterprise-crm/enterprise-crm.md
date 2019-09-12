@@ -1,11 +1,11 @@
 ---
-title: Smartcontact PHP SDK
+title: Graam PHP SDK
 ---
 
 # Enterprise CRM
 
-Smartcontact can connect to your CRM and log calls into it.
-In order for Smartcontact to interact with your CRM, you should first define your CRMs inside Smartcontact. You can do this by choosing the item "Enterprise CRM" on the left main menu.
+Graam can connect to your CRM and log calls into it.
+In order for Graam to interact with your CRM, you should first define your CRMs inside Graam. You can do this by choosing the item "Enterprise CRM" on the left main menu.
 
 To add a new CRM, click on the button "Create" (see bellow)
 

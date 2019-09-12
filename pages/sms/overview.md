@@ -1,17 +1,17 @@
 ---
-title: Send and Receive SMS with Smartcontact
+title: Send and Receive SMS with Graam
 ---
 
 ## SMS API
 
-You can use Smartcontact to send SMS to your client programmatically. All the SMS sent will be logged and can be seen from your Smartcontact account (see below).
+You can use Graam to send SMS to your client programmatically. All the SMS sent will be logged and can be seen from your Graam account (see below).
 
-#### Send SMS with Smartcontact SDK: 
-Click here to see example of how to use Smartcontact PHP SDK to send SMS: [Graam PHP SDK](/pages/enterprise-api/graam-php-sdk)
+#### Send SMS with Graam SDK: 
+Click here to see example of how to use Graam PHP SDK to send SMS: [Graam PHP SDK](/pages/enterprise-api/graam-php-sdk)
 
 ## Get the list of send and received SMS
 
-Login to your Smartcontact account. Click on "SMS" menu on the left to have access to the list of SMS sent and received.
+Login to your Graam account. Click on "SMS" menu on the left to have access to the list of SMS sent and received.
 
 ![SMS Sent](/images/sms-sent.png)
 

@@ -1,5 +1,5 @@
 ---
-Title: Smartcontact Enterprise API
+Title: Graam Enterprise API
 ---
 
 ## Phone Number API
