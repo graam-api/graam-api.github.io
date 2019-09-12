@@ -22,7 +22,7 @@ Here is the content of composer.json::
       "repositories": [
           {
               "type": "vcs",
-              "url": "https://github.com/Graam-saas/sdk-php.git"
+              "url": "https://github.com/graam-api/graam-sdk-php.git"
           }
       ],
       "require": {
@@ -48,7 +48,7 @@ require 'vendor/autoload.php';
 
 ```
 $client = new \Graam\SDK\Client;
-$client->init("api-key", "https://admin.graam.io");
+$client->init("api-key");
 ```
 
 ---
@@ -59,7 +59,7 @@ $client->init("api-key", "https://admin.graam.io");
 
 ```
 $client = new \Graam\SDK\Client;
-$client->init("xxxx", "https://admin.graam.io");
+$client->init("xxxx");
 
 $result = $client->call('sms.send',
                         array(  "sender" => "MySenderName",
