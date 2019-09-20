@@ -66,6 +66,37 @@ $client->init("api-key");
 $result = $client->call('user.list_all',
                         array();
 ```
+
+```
+object(stdClass) {
+  ["items"]=>
+  array() {
+    [0]=>
+        object(stdClass)#15 (9) {
+        ["public_id"]=>
+        string(32) "2e14cbabef5101a4b503aadee22596c6"
+        ["firstname"]=>
+        string(5) "Hải"
+        ["lastname"]=>
+        string(6) "Phạm"
+        ["email"]=>
+        string(25) "luckystar171091@gmail.com"
+        ["user_type"]=>
+        string(5) "agent"
+        ["enabled"]=>
+        int(1)
+        ["voicemail_enabled"]=>
+        int(0)
+        ["recording_mode"]=>
+        int(1)
+        ["google_login"]=>
+        int(1)
+        }
+    }
+  }
+}
+```
+
 ### Add an user
 
 ```
@@ -76,6 +107,31 @@ $result = $client->call('user.create',
                             'email' => 'emailuser@graam.io'
                         );
 ```
+
+```
+object(stdClass)#7 (1) {
+  ["item"]=>
+  object(stdClass)#8 (8) {
+    ["firstname"]=>
+    string(5) "first"
+    ["lastname"]=>
+    string(4) "last"
+    ["email"]=>
+    string(13) "flc@gmail.com"
+    ["user_type"]=>
+    string(4) "user"
+    ["enabled"]=>
+    int(1)
+    ["voicemail_enabled"]=>
+    int(0)
+    ["recording_mode"]=>
+    int(0)
+    ["google_login"]=>
+    int(1)
+  }
+}
+```
+
 ### Remove an user
 
 ```
@@ -83,6 +139,13 @@ $result = $client->call('user.remove',
                         array(
                             'public_id' => 'User-public-id',
                         );
+```
+
+```
+object(stdClass)#7 (1) {
+  ["result"]=>
+  string(2) "ok"
+}
 ```
 
 ---
@@ -94,6 +157,30 @@ $result = $client->call('user.remove',
 $result = $client->call('did.list_all',
                         array();
 ```
+
+```
+object(stdClass)#7 (1) {
+  ["items"]=>
+  array(7) {
+    [0]=>
+    object(stdClass)#8 (2) {
+      ["number"]=>
+      string(10) "8419009000"
+      ["routing_data"]=>
+      object(stdClass)#9 (2) {
+        ["params"]=>
+        object(stdClass)#10 (1) {
+          ["queue"]=>
+          int(1750)
+        }
+        ["application"]=>
+        string(9) "callqueue"
+      }
+    }
+  }
+}
+```
+
 ### Buy a number
 
 ```
@@ -101,8 +188,20 @@ $result = $client->call('did.buy',
                         array(
                             'country_code' => 'FR',
                             'prefix' => '1'
-                        );
+                        ));
 ```
+
+```
+object(stdClass)#7 (1) {
+  ["item"]=>
+  object(stdClass)#8 (1) {
+    ["number"]=>
+    string(12) "152142856444"
+  }
+}
+```
+
+
 ### Config a number
 
 ```
@@ -117,16 +216,60 @@ $result = $client->call('did.configure',
                             'welcome_message' => 'General number',
                         );
 ```
+
+```
+object(stdClass)#7 (1) {
+  ["item"]=>
+  object(stdClass)#8 (2) {
+    ["number"]=>
+    string(12) "152142856444"
+    ["routing_data"]=>
+    object(stdClass)#9 (2) {
+      ["application"]=>
+      string(17) "call_phone_number"
+      ["params"]=>
+      object(stdClass)#10 (1) {
+        ["number"]=>
+        string(4) "1112"
+      }
+    }
+  }
+}
+```
+
 ### List all the country that provide phone number
 
 ```
 $result = $client->call('did.zone.list_country',
                         array();
 ```
-### Reserve a number
 
 ```
-$result = $client->call('did.zone.reserve',
+object(stdClass)#7 (1) {
+  ["country_list"]=>
+  array(62) {
+    [0]=>
+    object(stdClass)#8 (2) {
+      ["country_name"]=>
+      string(10) "LUXEMBOURG"
+      ["code"]=>
+      string(2) "LU"
+    }
+    [1]=>
+    object(stdClass)#9 (2) {
+      ["country_name"]=>
+      string(8) "MALAYSIA"
+      ["code"]=>
+      string(2) "MY"
+    }
+  }
+}
+```
+
+### Reserve a number (Add numbers to cart)
+
+```
+$result = $client->call('did.reserve',
                         array(
                             'country_code' => 'FR',
                             'city_name' => 'FR',
@@ -136,7 +279,22 @@ $result = $client->call('did.zone.reserve',
                             'class' => 'CLASSIC'
                         );
 ```
-### Pay money for a reserved number
+
+```
+object(stdClass)#8 (2) {
+    ["token"]=>
+    string(12) "a6cab4f9e2aca79092ba772199008192"
+    ["expire"]=>
+    string(12) "2019-06-06 12:12:00"
+    ["items"]=>
+    array(2) {
+        [0] => string(12) "84976028600"
+        [1] => string(12) "84976028610"
+    }
+  }
+```
+
+### Pay money for all items in cart
 
 ```
 $result = $client->call('did.pay',
@@ -196,17 +354,17 @@ $result = $client->call('outbound_campaign.item.detail',
 ### Send an SMS
 
 ```
+require 'vendor/autoload.php';
 $client = new \GRAAM\SDK\Client;
 $client->init("xxxx");
 
 $result = $client->call('sms.send',
                         array(  "sender" => "336111123222",
-                                "destination" => "+33611111111",
+                                "destination" => "33611111111",
                                 "message" => "Hello, how are you?",
                                 "language" => "fra"
                              )
                         );
 ```
-
 
 ---
