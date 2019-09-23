@@ -28,7 +28,18 @@ Example of POST payload:
 ```JSON
 {
     "sms_id": "AD834FDSDDRF98DYDF80D0DF",
-    "success": true,
+    "send_status": 3,
+    "send_time": "2018-02-01 16:06:52+03:00",
     "delivery_time": "2018-02-01 16:06:57+01:00"
 }
+```
+
+send_status can be one of the following values:
+
+```
+0: "Waiting to be sent",
+1: "Try sending",
+2: "Sent",
+3: "Delivered",
+4: "Failure"
 ```
