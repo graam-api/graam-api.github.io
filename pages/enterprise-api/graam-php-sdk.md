@@ -241,7 +241,7 @@ object(stdClass)#7 (1) {
 
 ```
 $result = $client->call('did.zone.list_country',
-                        array();
+                        array());
 ```
 
 ```
@@ -277,7 +277,7 @@ $result = $client->call('did.reserve',
                             'type' => 'GEOGRAPHIC' // 'GEOGRAPHIC' | 'NATIONAL' | 'MOBILE',
                             'mode' => 'RANDOM', // SEQUENTIAL | RANDOM
                             'class' => 'CLASSIC'
-                        );
+                        ));
 ```
 
 ```
@@ -297,19 +297,32 @@ object(stdClass)#8 (2) {
 ### Pay money for all items in cart
 
 ```
-$result = $client->call('did.pay',
+$result = $client->call('did.order.pay',
                         array(
                             'order_token' => 'a6cab4f9e2aca79092ba772199008192'
-                        );
+                        ));
 ```
+
+```
+object(stdClass)#7 (1) {
+  "result"=> "OK"
+}
+```
+
 ### Clear the number in cart
 
 ```
 $result = $client->call('did.order.clear',
                         array(
                             'order_token' => 'a6cab4f9e2aca79092ba772199008192'
-                        );
+                        ));
 
+```
+
+```
+object(stdClass)#7 (1) {
+  "result"=> "OK"
+}
 ```
 
 ---
@@ -319,7 +332,7 @@ $result = $client->call('did.order.clear',
 
 ```
 $result = $client->call('outbound_campaign.list',
-                        array();
+                        array());
 ```
 
 ### Create an out call campaign
@@ -335,7 +348,7 @@ $result = $client->call('outbound_campaign.create',
                             'hour_end' => '12:00',
                             'priority' => 5,
                             'result_notification_url' => 'http://url-callback',
-                        );
+                        ));
 ```
 ### Out call campaign detail
 
@@ -344,7 +357,7 @@ $result = $client->call('outbound_campaign.item.detail',
                         array(
                             'campaign_id' => 22131,
                             'campaign_item_id' => 112131,
-                        );
+                        ));
 ```
 
 ---
