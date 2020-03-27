@@ -341,7 +341,7 @@ $result = $client->call('outbound_campaign.list',
 $result = $client->call('outbound_campaign.create',
                         array(
                             'name' => 'Out call campaign name',
-                            'alias' => 'Out call campaign alias',
+                            'campaign_alias' => 'outbound_campaign_1',
                             'schedule_start_date' => '2019-12-01',
                             'schedule_end_date' => '2019-12-30',
                             'hour_start' => '08:00',
@@ -350,6 +350,34 @@ $result = $client->call('outbound_campaign.create',
                             'result_notification_url' => 'http://url-callback',
                         ));
 ```
+
+### Add a number to be called to a campaign
+
+This function call will add a number into the outbound campaign identified by campaign_alias argument.
+
+```
+$result = $client->call('outbound_campaign.item.add',
+                        array(
+                            'campaign_alias' => 'outbound_campaign_1',
+                            'item' => array(
+                                "calling_number" => "0123456789",
+                                "called_number" => "0123456789",
+                                "start_date" => "2017-11-23",
+                                "end_date" => "2017-11-24",
+                                "start_time" => "10:00",
+                                "end_time" => "18:00"
+                            )
+                        ));
+```
+
+calling_number (required): One of your Graam phone number
+called_number (required): The number to be called
+start_date (optional): The call will not be made before this date
+start_time (optional): The call will not be made before this time in start_date
+end_date (optional): The call will not be made after this date
+end_time (optional): The call will not be made after this time in end_date
+
+
 ### Out call campaign detail
 
 ```
