@@ -365,7 +365,8 @@ $result = $client->call('outbound_campaign.item.add',
                                 "start_date" => "2017-11-23",
                                 "end_date" => "2017-11-24",
                                 "start_time" => "10:00",
-                                "end_time" => "18:00"
+                                "end_time" => "18:00",
+                                "max_retry_count" => 3
                             )
                         ));
 ```
@@ -376,7 +377,7 @@ start_date (optional): The call will not be made before this date
 start_time (optional): The call will not be made before this time in start_date
 end_date (optional): The call will not be made after this date
 end_time (optional): The call will not be made after this time in end_date
-
+max_retry_count (optional): If the number is not reachable, Graam will retry. This parameter set the limit of the number of retry
 
 ### Out call campaign detail
 
